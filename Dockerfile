@@ -3,5 +3,7 @@ FROM php:8.2-cli
 WORKDIR /app
 COPY . .
 
+ENV PORT=10000
 EXPOSE 10000
-CMD ["sh", "-c", "php -S 0.0.0.0:${PORT} index.php"]
+
+CMD ["php", "-S", "0.0.0.0:10000", "index.php"]
